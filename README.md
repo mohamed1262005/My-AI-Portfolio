@@ -25,7 +25,7 @@
 
 * **الموقع الشخصي:** (https://mohamed-sameh12-portfolio.netlify.app)
 * **لينكد إن:** (https://www.linkedin.com/in/mohamed-sameh-abdo-988a13336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-* **منصة مستقل:**(https://mostaql.com/u/Mohamed_Sameh)
+* **منصة مستقل:**(https://mostaql.com/u/mohamed1262005)
 
 ---
 ⭐️ *يسعدني دائماً التعاون في مشاريع مبتكرة، لا تتردد في التواصل معي!*
