@@ -39,6 +39,32 @@
             --ai-blue: #0ea5e9;
             --ai-purple: #19b9ea;
             --ai-cyan: #06b6d4;
+            /* كود التوافق مع الشاشات الصغيرة والموبايل */
+            @media (max-width: 768px) {
+                :root {
+                    --container-width: 95%;
+                }
+                body {
+                    font-size: 15px;
+                    padding: 10px;
+                }
+                h1 {
+                    font-size: 1.8rem !important;
+                }
+                .cv-btn {
+                    width: 100%; /* الزر يأخذ عرض الشاشة لسهولة الضغط */
+                    max-width: 280px;
+                    box-sizing: border-box;
+                }
+                .skills-container, .projects-grid {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                section {
+                    padding: 20px 10px !important;
+                }
+        }
         }
 
         /* ===== Global Reset ===== */
@@ -898,6 +924,7 @@
 </body>
 
 </html>
+
 
 
 
