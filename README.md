@@ -23,7 +23,7 @@
 
 ## 🌐 تواصل معي
 
-* **الموقع الشخصي:** (https://mohamed-sameh12-portfolio.netlify.app)
+* **الموقع الشخصي:** (https://mohamed1262005.github.io/My-AI-Portfolio/)
 * **لينكد إن:** (https://www.linkedin.com/in/mohamed-sameh-abdo-988a13336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 * **منصة مستقل:**(https://mostaql.com/u/sameh_py_8)
 
