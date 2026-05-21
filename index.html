@@ -391,7 +391,6 @@
             flex-grow: 1;
         }
 
-        /* تنسيق الأزرار الجديد ليعيد الشكل الأزرق الأصلي المحترف */
         button.project-btn {
             color: var(--primary);
             font-weight: 700;
@@ -684,7 +683,7 @@
 
         <section id="about">
             <h2 class="section-title">من هو المهندس محمد؟</h2>
-            <p>مهندس ذكاء اصطناعي متخصص في ابتكار الحلول الذكية التي تدمج بين الرؤية الحاسوبية (Computer Vision) وإنترنت الأشياء (IoT). يتمتع بسجل حافل في تطويع لغة Python ومتحكمات ESP32 لتحويل النظريات الهندسية إلى أنظمة واقعية معقدة، بدءاً من خوادم التحليل الذكية وصولاً إلى تقنيات المراقبة المتقدمة. يركز في عمله على الجانب الإنساني للتقنية، حيث نجح في تطوير أنظمة مساعدة متكاملة لذوي الإعاقة البصرية، مؤمناً بأن القوة الحقيقية للذكاء الاصطناعي تكمن في قدرته على صناعة أثر ملموس وقابل للقياس في حياة المستخدمين</p>
+            <p>مهندس ذكاء اصطناعي متخصص في ابتكار الحلول الذكية التي تدمج بين الرؤية الحاسوبية (Computer Vision) وإنترنت الأشياء (IoT). يتمتع بسجل حافل في تطويع لغة Python ومتحكمات ESP32 لتحويل النظريات الهندسية إلى أنظمة واقعية معقدة, بدءاً من خوادم التحليل الذكية وصولاً إلى تقنيات المراقبة المتقدمة. يركز في عمله على الجانب الإنساني للتقنية، حيث نجح في تطوير أنظمة مساعدة متكاملة لذوي الإعاقة البصرية، مؤمناً بأن القوة الحقيقية للذكاء الاصطناعي تكمن في قدرته على صناعة أثر ملموس وقابل للقياس في حياة المستخدمين</p>
         </section>
         
         <div style="text-align: center; margin-bottom: 40px;">
@@ -772,6 +771,22 @@
                     </div>
                 </div>
             </div>
+            
+            <form id="contactForm" action="https://formspree.io/f/mwvkaepe" method="POST">
+                <input type="text" name="name" placeholder="الاسم الكامل" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <textarea name="message" rows="4" placeholder="كيف يمكنني مساعدتك؟" required></textarea>
+                <button type="submit" id="submitBtn">
+                    إرسال الرسالة <i class="fas fa-paper-plane"></i>
+                </button>
+                <div id="successMessage" style="display:none; color: #10b981; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 15px; border-radius: 12px; margin-top: 15px; text-align: center; backdrop-filter: blur(10px);">
+                    <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
+                    تم الإرسال بنجاح! سأتواصل معك قريباً.
+                </div>
+            </form>
+        </section>
+    </div>
+
     <footer>
         <p>© 2025 محمد سامح محمد | جميع الحقوق محفوظة</p>
     </footer>
