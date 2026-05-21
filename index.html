@@ -8,7 +8,6 @@
     <meta name="keywords" content="مهندس ذكاء اصطناعي في مصر, AI Engineer in Egypt, AI Engineer Egypt, محمد سامح محمد, mohamed sameh, Python Developer, Machine Learning">
     <meta name="author" content="محمد سامح محمد">
  
-    
     <meta property="og:title" content="المهندس محمد سامح محمد | مهندس ذكاء اصطناعي">
     <meta property="og:description" content="تصفح مشاريعي في الذكاء الاصطناعي وتطوير البرمجيات.">
     <meta property="og:image" content="profile.jpg">
@@ -16,7 +15,6 @@
    
     <title>محمد سامح أبوعبده | مهندس ذكاء اصطناعي</title>
     
-    <!-- External Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -41,32 +39,33 @@
             --ai-blue: #0ea5e9;
             --ai-purple: #19b9ea;
             --ai-cyan: #06b6d4;
-            /* كود التوافق مع الشاشات الصغيرة والموبايل */
-            @media (max-width: 768px) {
-                :root {
-                    --container-width: 95%;
-                }
-                body {
-                    font-size: 15px;
-                    padding: 10px;
-                }
-                h1 {
-                    font-size: 1.8rem !important;
-                }
-                .cv-btn {
-                    width: 100%; /* الزر يأخذ عرض الشاشة لسهولة الضغط */
-                    max-width: 280px;
-                    box-sizing: border-box;
-                }
-                .skills-container, .projects-grid {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-                section {
-                    padding: 20px 10px !important;
-                }
         }
+
+        /* كود التوافق مع الشاشات الصغيرة والموبايل */
+        @media (max-width: 768px) {
+            :root {
+                --container-width: 95%;
+            }
+            body {
+                font-size: 15px;
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.8rem !important;
+            }
+            .cv-btn {
+                width: 100%;
+                max-width: 280px;
+                box-sizing: border-box;
+            }
+            .skills-container, .projects-grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            section {
+                padding: 20px 10px !important;
+            }
         }
 
         /* ===== Global Reset ===== */
@@ -105,12 +104,10 @@
         body {
             background: var(--light-bg);
             background-image: 
-                /* AI Neural Network Pattern */
                 radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.1) 0%, transparent 25%),
                 radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 25%),
                 radial-gradient(circle at 60% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 30%),
                 radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 30%),
-                /* Circuit Pattern */
                 linear-gradient(90deg, transparent 24%, rgba(37, 99, 235, 0.03) 25%, rgba(37, 99, 235, 0.03) 26%, transparent 27%, transparent 74%, rgba(37, 99, 235, 0.03) 75%, rgba(37, 99, 235, 0.03) 76%, transparent 77%),
                 linear-gradient(0deg, transparent 24%, rgba(124, 58, 237, 0.03) 25%, rgba(124, 58, 237, 0.03) 26%, transparent 27%, transparent 74%, rgba(124, 58, 237, 0.03) 75%, rgba(124, 58, 237, 0.03) 76%, transparent 77%);
             background-size: 400px 400px, 300px 300px, 500px 500px, 350px 350px, 50px 50px, 50px 50px;
@@ -119,32 +116,20 @@
             overflow-x: hidden;
             font-weight: 400;
             position: relative;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
             min-height: 100vh;
-            display: center;
-            justify-content: center;
-            align-items: center;
-            /* ألوان هادئة مستوحاة من هويتك البصرية */
             background-color: #e5e7eb;
-            background-image: 
-                radial-gradient(at 0% 0%, hsla(225,39%,30%,0.1) 0px, transparent 50%),
-                radial-gradient(at 50% 0%, hsla(225,100%,80%,0.2) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, hsla(225,39%,30%,0.1) 0px, transparent 50%);
             background-attachment: fixed;
         }
-        .card {
 
-            background: rgba(255, 255, 255, 0.4); /* شفافية بيضاء */
-            backdrop-filter: blur(15px); /* تأثير التغبيش */
+        .card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.2); /* إطار خفيف جداً */
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 30px;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); /* ظل ناعم */
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
         }
+
         .container {
             max-width: 1200px;
             margin: auto;
@@ -152,7 +137,6 @@
             position: relative;
             z-index: 1;
         }
-
       
         header {
             text-align: center;
@@ -176,7 +160,7 @@
             width: 200%;
             height: 200%;
             background: conic-gradient(from 0deg, transparent, rgba(37, 99, 235, 0.1), transparent);
-            animation: rotate 20s linear infinite;
+            animation: rotate Conic 20s linear infinite;
             z-index: -1;
         }
 
@@ -407,6 +391,45 @@
             flex-grow: 1;
         }
 
+        /* تنسيق الأزرار الجديد ليعيد الشكل الأزرق الأصلي المحترف */
+        button.project-btn {
+            color: var(--primary);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            font-family: 'Cairo', sans-serif;
+            text-align: right;
+            padding: 0;
+            width: fit-content;
+        }
+
+        button.project-btn:hover {
+            color: var(--accent);
+            transform: translateX(-5px);
+        }
+
+        button.project-btn i {
+            font-size: 1.2rem;
+            margin-bottom: 0;
+            -webkit-text-fill-color: initial;
+            background: initial;
+            background-clip: initial;
+            color: inherit;
+            transition: transform 0.3s ease;
+        }
+
+        button.project-btn:hover i {
+            transform: translateX(-5px);
+        }
+
         .project a {
             color: var(--primary);
             font-weight: 700;
@@ -426,10 +449,11 @@
         .project a i {
             font-size: 1.2rem;
             transition: transform 0.3s ease;
+            margin-bottom: 0;
         }
 
         .project a:hover i {
-            transform: translateX(5px);
+            transform: translateX(-5px);
         }
 
         /* ===== Contact Section ===== */
@@ -593,7 +617,7 @@
             }
         }
 
-        @keyframes rotate {
+        @keyframes rotateConic {
             from {
                 transform: rotate(0deg);
             }
@@ -602,64 +626,33 @@
             }
         }
 
-        @keyframes aiFloat {
-            0%, 100% {
-                transform: translateY(0px) translateX(0px);
-            }
-            25% {
-                transform: translateY(-10px) translateX(5px);
-            }
-            50% {
-                transform: translateY(0px) translateX(10px);
-            }
-            75% {
-                transform: translateY(10px) translateX(5px);
-            }
-        }
-
-        @keyframes aiPulse {
-            0% {
-                opacity: 0.3;
-            }
-            100% {
-                opacity: 0.6;
-            }
-        }
-
         /* ===== Responsive Design ===== */
         @media (max-width: 768px) {
             .container {
                 padding: 20px 15px;
             }
-
             header {
                 padding: 60px 30px;
                 margin-bottom: 60px;
             }
-            
             header h1 {
                 font-size: 2.5rem;
             }
-
             .section-title {
                 font-size: 1.8rem;
             }
-
             #contact {
                 grid-template-columns: 1fr;
                 padding: 40px 30px;
             }
-
             .skills-container {
                 grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
                 gap: 15px;
             }
-
             #projects {
                 grid-template-columns: 1fr;
                 gap: 25px;
             }
-
             #about {
                 padding: 40px 30px;
                 margin-bottom: 60px;
@@ -670,12 +663,10 @@
             header h1 {
                 font-size: 2rem;
             }
-
             .profile-img {
                 width: 150px;
                 height: 150px;
             }
-
             .section-title {
                 font-size: 1.5rem;
             }
@@ -685,25 +676,23 @@
 <body>
 
     <div class="container">
-        <!-- Header Section -->
         <header>
             <img src="profile.jpg" alt="محمد سامح محمد" class="profile-img">
             <h1>محمد سامح محمد</h1>
             <p><i class="fas fa-brain"></i> مهندس ذكاء اصطناعي | Python Developer</p>
         </header>
 
-        <!-- About Section -->
         <section id="about">
             <h2 class="section-title">من هو المهندس محمد؟</h2>
             <p>مهندس ذكاء اصطناعي متخصص في ابتكار الحلول الذكية التي تدمج بين الرؤية الحاسوبية (Computer Vision) وإنترنت الأشياء (IoT). يتمتع بسجل حافل في تطويع لغة Python ومتحكمات ESP32 لتحويل النظريات الهندسية إلى أنظمة واقعية معقدة، بدءاً من خوادم التحليل الذكية وصولاً إلى تقنيات المراقبة المتقدمة. يركز في عمله على الجانب الإنساني للتقنية، حيث نجح في تطوير أنظمة مساعدة متكاملة لذوي الإعاقة البصرية، مؤمناً بأن القوة الحقيقية للذكاء الاصطناعي تكمن في قدرته على صناعة أثر ملموس وقابل للقياس في حياة المستخدمين</p>
         </section>
-         <div style="text-align: center; margin-bottom: 40px;">
-            <a href="Mohamed-Sameh-CV.pdf" target="_blank" class="cv-btn">
-            <i class="fas fa-file-download"></i> تحميل السيرة الذاتية (CV)
-        </a>
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <a href="Mohamed-Sameh-CV.pdf" target="_blank" class="cv-btn" style="text-decoration: none; display: inline-block;">
+                <i class="fas fa-file-download"></i> تحميل السيرة الذاتية (CV)
+            </a>
         </div>
         
-        <!-- Skills Section -->
         <h2 class="section-title">الخبرات التقنية</h2>
         <section class="skills-container">
             <div class="skill">Python</div>
@@ -718,7 +707,6 @@
             <div class="skill">JavaScript</div>
         </section>
 
-        <!-- Projects Section -->
         <h2 class="section-title">أبرز المشاريع</h2>
         <section id="projects">
             <div class="project">
@@ -728,7 +716,7 @@
                     نظام ذكي يعتمد على MediaPipe لمراقبة وضعية الجلوس 
                     وتصحيحها فورياً عبر إشعارات الهاتف.
                 </p>
-                <button onclick="openVideo('https://youtu.be/l0YhaHtbYHs')" class="project-btn">فيديو للمشروع <i class="fas fa-play"></i></button>
+                <button onclick="openVideo('https://www.youtube.com/embed/l0YhaHtbyHs')" class="project-btn">فيديو للمشروع <i class="fas fa-play"></i></button>
             </div>
 
             <div class="project">
@@ -738,7 +726,7 @@
                     نظارات ذكية تستخدم EasyOCR و Edge-TTS لتحويل المحتوى البصري 
                     إلى صوت لمساعدة المكفوفين.
                 </p>
-                    <button onclick="openVideo('https://www.youtube.com/embed/K-CjsMFuLEE')" class="project-btn">فيديو للمشروع <i class="fas fa-play"></i></button>
+                <button onclick="openVideo('https://www.youtube.com/embed/K-CjsMFuLEE')" class="project-btn">فيديو للمشروع <i class="fas fa-play"></i></button>
             </div>
 
             <div class="project">
@@ -753,7 +741,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact">
             <div class="contact-info">
                 <h2 class="section-title">تواصل معي</h2>
@@ -773,41 +760,23 @@
                            style="color:rgba(26, 1, 1, 0.86); text-decoration:none;">
                             GitHub
                         </a>
-               
-             </ul>
-             <div style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
-                <div class="badge-base LI-profile-badge" data-locale="ar_AE" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="mohamed-sameh-abdo" data-version="v1">
-                <a class="badge-base__link LI-simple-link" href="https://eg.linkedin.com/in/mohamed-sameh-abdo?trk=profile-badge">Mohamed Sameh Abdo</a>
+                    </li>
+                </ul>
+                <div style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
+                    <div class="badge-base LI-profile-badge" data-locale="ar_AE" data-size="large" data-theme="dark" data-type="VERTICAL" data-vanity="mohamed-sameh-abdo" data-version="v1">
+                        <a class="badge-base__link LI-simple-link" href="https://eg.linkedin.com/in/mohamed-sameh-abdo?trk=profile-badge">Mohamed Sameh Abdo</a>
+                    </div>
                 </div>
             </div>
             
-            <!-- Contact Form -->
             <form id="contactForm" action="https://formspree.io/f/mwvkaepe" method="POST">
-                <input type="text" 
-                       name="name" 
-                       placeholder="الاسم الكامل" 
-                       required>
-                <input type="email" 
-                       name="email" 
-                       placeholder="البريد الإلكتروني" 
-                       required>
-                <textarea name="message" 
-                          rows="4" 
-                          placeholder="كيف يمكنني مساعدتك؟" 
-                          required></textarea>
+                <input type="text" name="name" placeholder="الاسم الكامل" required>
+                <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+                <textarea name="message" rows="4" placeholder="كيف يمكنني مساعدتك؟" required></textarea>
                 <button type="submit" id="submitBtn">
                     إرسال الرسالة <i class="fas fa-paper-plane"></i>
                 </button>
-                <div id="successMessage" 
-                     style="display:none; 
-                            color: #10b981; 
-                            background: rgba(16, 185, 129, 0.1);
-                            border: 1px solid rgba(16, 185, 129, 0.2);
-                            padding: 15px;
-                            border-radius: 12px;
-                            margin-top: 15px; 
-                            text-align: center;
-                            backdrop-filter: blur(10px);">
+                <div id="successMessage" style="display:none; color: #10b981; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2); padding: 15px; border-radius: 12px; margin-top: 15px; text-align: center; backdrop-filter: blur(10px);">
                     <i class="fas fa-check-circle" style="margin-left: 8px;"></i>
                     تم الإرسال بنجاح! سأتواصل معك قريباً.
                 </div>
@@ -815,12 +784,19 @@
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 محمد سامح محمد | جميع الحقوق محفوظة</p>
     </footer>
 
-    <!-- JavaScript -->
+    <div id="videoModal" class="modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.85); justify-content: center; align-items: center;">
+        <div style="position: relative; width: 85%; max-width: 750px; background: #000; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+            <span onclick="closeVideo()" style="position: absolute; top: 10px; right: 20px; color: #fff; font-size: 35px; font-weight: bold; cursor: pointer; z-index: 10001;">&times;</span>
+            <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+                <iframe id="modalIframe" src="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Contact Form Handler
         const form = document.getElementById('contactForm');
@@ -831,7 +807,6 @@
             const btn = document.getElementById('submitBtn');
             const msg = document.getElementById('successMessage');
             
-            // Show loading state
             btn.innerHTML = "جاري الإرسال...";
             btn.disabled = true;
 
@@ -844,46 +819,33 @@
                 });
 
                 if (response.ok) {
-                    // Show success message
                     msg.style.display = 'block';
                     form.reset();
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => { 
-                        msg.style.display = 'none'; 
-                    }, 5000);
+                    setTimeout(() => { msg.style.display = 'none'; }, 5000);
                 } else {
                     alert("عذراً، حدث خطأ أثناء الإرسال.");
                 }
             } catch (error) {
                 alert("فشل الاتصال بالخادم.");
             } finally {
-                // Reset button state
                 btn.innerHTML = "إرسال الرسالة <i class='fas fa-paper-plane'></i>";
                 btn.disabled = false;
             }
         });
 
-        // Smooth scrolling for internal links
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
 
         // Add scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -893,7 +855,6 @@
             });
         }, observerOptions);
 
-        // Observe elements for animation
         document.querySelectorAll('.skill, .project, #about').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
@@ -901,52 +862,19 @@
             observer.observe(el);
         });
 
-        // Add parallax effect to background
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallax = document.querySelector('body::before');
-            if (parallax) {
-                const speed = scrolled * 0.5;
-                document.body.style.backgroundPosition = `center ${speed}px`;
-            }
-        });
+        // Video Player Functions
+        function openVideo(videoUrl) {
+            document.getElementById('modalIframe').src = videoUrl;
+            document.getElementById('videoModal').style.display = 'flex';
+        }
 
-    <div id="videoModal" class="modal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center;">
-        <div style="position: relative; width: 80%; max-width: 800px; background: #000; border-radius: 8px; overflow: hidden;">
-            <span onclick="closeVideo()" style="position: absolute; top: 10px; right: 15px; color: #fff; font-size: 30px; font-weight: bold; cursor: pointer; z-index: 1001;">&times;</span>
-            <div style="position: relative; padding-bottom: 56.25%; height: 0;">
-                <iframe id="modalIframe" src="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    function openVideo(videoUrl) {
-        document.getElementById('modalIframe').src = videoUrl;
-        document.getElementById('videoModal').style.display = 'flex';
-    }
-
-    function closeVideo() {
-        document.getElementById('videoModal').style.display = 'none';
-        document.getElementById('modalIframe').src = '';
-    }
+        function closeVideo() {
+            document.getElementById('videoModal').style.display = 'none';
+            document.getElementById('modalIframe').src = '';
+        }
     </script>
 
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
