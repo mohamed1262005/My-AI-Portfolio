@@ -1,0 +1,44 @@
+# 👋 أهلاً بك، أنا محمد سامح محمد 
+### مهندس ذكاء اصطناعي ومطور بايثون | AI Engineer & Python Developer
+
+مرحباً بك في مستودع أعمالي! أنا متخصص في بناء حلول ذكية باستخدام تقنيات تعلم الآلة (Machine Learning) والرؤية الحاسوبية (Computer Vision)، وأسعى دائماً لتحويل البيانات إلى قرارات ملموسة.
+
+---
+
+## 🛠 المهارات التقنية (Technical Skills)
+
+* **لغات البرمجة:** Python (Expert), SQL.
+* **الذكاء الاصطناعي:** Machine Learning, Deep Learning, Computer Vision.
+* **المكتبات:** NumPy, Pandas, Scikit-learn, TensorFlow, OpenCV.
+* **أدوات المطورين:** Git & GitHub, Netlify, VS Code.
+
+---
+
+## 🚀 مشاريعي (Projects)
+## 🚀 مشاريعي المميزة (Featured Projects)
+
+### 🗺️ [Holiday Horizon - Travel Planner Platform](https://github.com/mohamed1262005/-Wanderly-by-Mohamed.git)
+* **الوصف:** منصة ويب متكاملة ومتقدمة لتخطيط السفر وحجز الفنادق والطيران، تتيح للمستخدمين تنظيم رحلاتهم بالكامل عبر واجهة مستخدم سلسة وتفاعلية تم تطويرها ونشرها باستخدام تقنيات الويب الحديثة.
+* **التقنيات المستخدمة:** `Next.js`, `Firebase`, `Tailwind CSS`, `Git/GitHub`.
+
+### 👁️ [Adaptive Gesture Interface](https://github.com/mohamed1262005/Adaptive-Gesture-Interface.git)
+* **الوصف:** نظام ذكي تفاعلي يعتمد على الذكاء الاصطناعي للتحكم بمؤشر الكمبيوتر بدون ملامسة، عبر تتبع حركات الوجه، العين، وحركات اليد بدقة متناهية في الوقت الفعلي باستخدام كاميرا الويب.
+* **التقنيات المستخدمة:** `Python`, `OpenCV`, `MediaPipe`, نماذج التتبع ثلاثية الأبعاد.
+
+### 🪴 [Smart Plant IoT System](رابط_المستودع_هنا)
+* **الوصف:** نظام ري ذكي مؤتمت بالكامل لمراقبة رطوبة التربة والعوامل البيئية المحيطة بالنباتات، مع تفعيل الري التلقائي ومراقبة البيانات وبثها حياً إلى تطبيق جوال مخصص للتحكم عن بعد.
+* **التقنيات المستخدمة:** `ESP32 Microcontroller`, `C++`, `Blynk IoT Platform`, `Soil & Temp Sensors`.
+
+### 🛡️ [Posture Guard AI](https://github.com/mohamed1262005/Smart-Posture-Monitor.git)
+* **الوصف:** نظام ذكي مدمج يهدف لتحسين الصحة البدنية أثناء العمل بفضل مستشعرات دقيقة تحسب زوايا ميلان الظهر والرقبة وتطلق تنبيهات فورية عند رصد وضعيات جلوس غير صحية.
+* **التقنيات المستخدمة:** `Python`, `MPU6050 Sensor`, معالجة الإشارات البرمجية.
+---
+
+## 🌐 تواصل معي
+
+* **الموقع الشخصي:** (https://mohamed1262005.github.io/My-AI-Portfolio/)
+* **لينكد إن:** (https://www.linkedin.com/in/mohamed-sameh-abdo-988a13336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+* **منصة مستقل:**(https://mostaql.com/u/sameh_py_8)
+
+---
+⭐️ *يسعدني دائماً التعاون في مشاريع مبتكرة، لا تتردد في التواصل معي!*
