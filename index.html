@@ -78,7 +78,7 @@
         .orb-3 { width: 280px; height: 280px; top: 48%; inset-inline-end: 6%; background: #8B5CF6; opacity: .08; animation-delay: -12s; }
         @keyframes floaty { 0%,100% { transform: translate(0,0); } 50% { transform: translate(40px, 34px); } }
 
-        /* الكروت الفاخرة المضيئة بتأثير 3D Tilt */
+        /* الكروت الفاخرة المضيئة بتأثير 3D Tilt التفاعلي */
         .lux-card {
             position: relative; border-radius: 24px; border: 1px solid transparent;
             background:
@@ -86,7 +86,7 @@
                 linear-gradient(135deg, rgba(16,185,129,.5), rgba(0,242,254,.2) 42%, rgba(139,92,246,.5)) border-box;
             backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
             box-shadow: 0 18px 44px -18px rgba(0,0,0,.95), inset 0 1px 0 rgba(255,255,255,.05);
-            transition: transform .2s ease-out, box-shadow .3s ease, border-color .3s ease;
+            transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease, border-color .3s ease;
             transform-style: preserve-3d;
             perspective: 1000px;
         }
@@ -97,7 +97,7 @@
 
         .spot::before {
             content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s;
-            background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(16,185,129,.2), transparent 45%);
+            background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 50%), rgba(16,185,129,.25), transparent 45%);
         }
         .spot:hover::before { opacity: 1; }
         .no-lift:hover { transform: none !important; }
@@ -120,7 +120,7 @@
         .mark img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
         .mark-nav { width: 38px; height: 38px; font-size: .8rem; box-shadow: 0 0 14px rgba(16,185,129,.35); }
 
-        /* البروفايل الشخصي الحي والمتحرك */
+        /* صورة البروفايل الحية والنابضة للحياة */
         .avatar-wrap { position: relative; width: max-content; margin-inline: auto; animation: heroPulse 5s ease-in-out infinite; }
         .avatar-ring { position: relative; border-radius: 50%; padding: 5px; }
         .avatar-ring::before {
@@ -170,9 +170,40 @@
         .logo-frame::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.2) 50%, transparent 60%); transform: translateX(-120%); animation: shine 7s ease-in-out infinite; }
         @keyframes shine { 0%, 55% { transform: translateX(-120%); } 85%, 100% { transform: translateX(120%); } }
 
-        .proj-img-wrap { position: relative; width: 100%; height: 185px; border-radius: 16px; overflow: hidden; border: 1px solid rgba(16,185,129,.3); margin-bottom: 1.2rem; }
-        .proj-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
-        .lux-card:hover .proj-img-wrap img { transform: scale(1.08); }
+        /* إطار الصورة الحي لمشاريع والشهادات */
+        .proj-img-wrap {
+            position: relative; width: 100%; height: 190px; border-radius: 18px; overflow: hidden;
+            border: 1px solid rgba(16,185,129,.35); margin-bottom: 1.2rem; background: #070C18;
+            box-shadow: inset 0 0 20px rgba(0,0,0,.8);
+        }
+        .proj-img-wrap img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .4s ease;
+            animation: imgFloat 6s ease-in-out infinite alternate;
+        }
+        .lux-card:hover .proj-img-wrap img {
+            transform: scale(1.08) translateY(-4px);
+            filter: brightness(1.1);
+        }
+        @keyframes imgFloat {
+            0% { transform: scale(1) translateY(0); }
+            100% { transform: scale(1.03) translateY(-3px); }
+        }
+
+        /* إطار عرض الشهادات كاملة مع التكبير التفاعلي دون اقتطاع */
+        .cert-img-wrap {
+            position: relative; width: 100%; height: 210px; border-radius: 16px; overflow: hidden;
+            border: 1px solid rgba(16,185,129,.4); margin-bottom: 1rem; background: #090E1A;
+            display: flex; align-items: center; justify-content: center; padding: 6px;
+        }
+        .cert-img-wrap img {
+            max-width: 100%; max-height: 100%; object-fit: contain;
+            transition: transform .5s ease, filter .3s ease;
+        }
+        .lux-card:hover .cert-img-wrap img {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 12px rgba(16,185,129,.4));
+        }
 
         .dark-card {
             position: relative; border-radius: 30px; color: #E2E8F0;
@@ -202,6 +233,12 @@
         .js .reveal.done { transition: transform .35s ease, box-shadow .35s ease; transition-delay: 0s; }
         .pop { animation: pop .5s ease both; }
         @keyframes pop { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
+
+        @media (max-width: 768px) {
+            .lux-card, .nav-pill { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; background: #0A0F1D !important; }
+            .lux-card { box-shadow: 0 8px 20px rgba(0,0,0,0.6) !important; }
+            .avatar-wrap, .avatar-ring::before, .avatar-ring::after { animation: none !important; }
+        }
     </style>
 </head>
 <body class="font-sans antialiased overflow-x-hidden selection:bg-emeraldglow selection:text-night">
@@ -248,7 +285,7 @@
 
     <div id="top" class="relative z-10 max-w-6xl mx-auto px-3 sm:px-6 pt-28 pb-16">
 
-        <!-- HERO SECTION (صورة البروفايل الحية والنابضة بالحياة) -->
+        <!-- HERO SECTION (صورة البروفايل الحية) -->
         <header class="lux-card spot no-lift text-center px-6 py-12 sm:py-16 mb-8 reveal overflow-hidden">
             <div class="relative inline-flex items-center gap-2 bg-emeraldglow/10 border border-emeraldglow/30 text-emeraldglow px-3.5 py-1 rounded-full text-[11px] font-bold mb-8">
                 <span class="w-1.5 h-1.5 rounded-full bg-emeraldglow animate-ping"></span> <span data-i18n="availability">متاح للعمل الحر والتعاون</span>
@@ -385,7 +422,7 @@
             </div>
         </section>
 
-        <!-- PROJECTS SECTION (صور دقيقة وواقعية بالكامل لكل مشروع) -->
+        <!-- PROJECTS SECTION (صور دقيقة وواقعية وحية لكل مشروع) -->
         <section id="projects" class="mb-16">
             <div class="reveal mb-7">
                 <div class="eyebrow"><span>05 — PROJECTS</span><i></i></div>
@@ -394,10 +431,10 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6" id="projects-grid">
 
-                <!-- Project 1: الجلسة الصحية (صورة شخص يجلس بوضعية صحية ممتازة أمام الحاسوب) -->
+                <!-- Project 1: Smart Posture Monitor -->
                 <article class="lux-card spot reveal p-6 flex flex-col">
                     <div class="proj-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&auto=format&fit=crop" alt="Smart Posture Monitor - Correct Ergonomic Seating">
+                        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&auto=format&fit=crop" alt="Smart Posture Monitor - Ergonomic Seating">
                     </div>
                     <div class="flex items-start justify-between mb-3">
                         <span class="ico-box"><i class="fas fa-user-shield"></i></span><span class="num">01</span>
@@ -413,7 +450,7 @@
                 <!-- Project 2: Smart Glasses for Visually Impaired -->
                 <article class="lux-card spot reveal p-6 flex flex-col">
                     <div class="proj-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop" alt="Smart Glasses for Visually Impaired - AI Vision & Assistive Tech">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=600&auto=format&fit=crop" alt="Smart Glasses for Visually Impaired">
                     </div>
                     <div class="flex items-start justify-between mb-3">
                         <span class="ico-box"><i class="fas fa-glasses"></i></span><span class="num">02</span>
@@ -429,7 +466,7 @@
                 <!-- Project 3: Wanderly Travel Planner -->
                 <article class="lux-card spot reveal p-6 flex flex-col">
                     <div class="proj-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop" alt="Wanderly Travel Planner - Booking & UI Platform">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=600&auto=format&fit=crop" alt="Wanderly Travel Planner">
                     </div>
                     <div class="flex items-start justify-between mb-3">
                         <span class="ico-box"><i class="fas fa-plane-departure"></i></span><span class="num">03</span>
@@ -456,10 +493,10 @@
                     </div>
                 </article>
 
-                <!-- Project 5: Smart Plant Care IoT (صورة واقعية لنبات ذكي ومستشعرات خضراء) -->
+                <!-- Project 5: Smart Plant Care IoT System -->
                 <article class="lux-card spot reveal p-6 flex flex-col">
                     <div class="proj-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&auto=format&fit=crop" alt="Smart Plant Care IoT System - Real Plant & Irrigation">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&auto=format&fit=crop" alt="Smart Plant Care IoT System">
                     </div>
                     <div class="flex items-start justify-between mb-3">
                         <span class="ico-box"><i class="fas fa-seedling"></i></span><span class="num">05</span>
@@ -472,10 +509,10 @@
                     </div>
                 </article>
 
-                <!-- Project 6: التحكم باللاب (صورة واقعية للتفاعل والتحكم بالحاسوب عبر إيماءات اليد والوجه) -->
+                <!-- Project 6: VisionGlide Adaptive Gesture Interface -->
                 <article class="lux-card spot reveal p-6 flex flex-col">
                     <div class="proj-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&auto=format&fit=crop" alt="VisionGlide Laptop Control via Gestures & Eye Tracking">
+                        <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&auto=format&fit=crop" alt="VisionGlide Laptop Control via Gestures">
                     </div>
                     <div class="flex items-start justify-between mb-3">
                         <span class="ico-box"><i class="fas fa-laptop-code"></i></span><span class="num">06</span>
@@ -490,7 +527,7 @@
             </div>
         </section>
 
-        <!-- VAULT SECTION (كروت الشهادات حية وتتحرك مع الماوس 3D) -->
+        <!-- VAULT SECTION (عرض الشهادات بشكل كامل بدون اقتطاع مع تأثيرات حية) -->
         <section id="vault" class="mb-16">
             <div class="text-center mb-8 reveal">
                 <div class="eyebrow center"><i></i><span>06 — CREDENTIALS</span><i></i></div>
@@ -505,7 +542,7 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5" id="cert-grid"></div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="cert-grid"></div>
             <div id="no-results" class="hidden text-center py-12">
                 <i class="fa-solid fa-folder-open text-3xl text-cyberblue mb-3"></i>
                 <p class="text-mute text-sm" data-i18n="no_results">No matching certificates found.</p>
@@ -592,16 +629,16 @@
         <p>© 2026 <span class="grad-text font-bold">Mohamed Sameh</span>. All rights reserved.</p>
     </footer>
 
-    <!-- Certificate Modal -->
-    <div id="cert-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md hidden p-4 overflow-y-auto">
-        <div class="bg-[#0A0F1D] max-w-2xl w-full rounded-3xl p-6 relative border border-emeraldglow/40 shadow-2xl my-auto overflow-hidden">
+    <!-- Modal الشهادة المعتمدة بملء الشاشة -->
+    <div id="cert-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md hidden p-4 overflow-y-auto">
+        <div class="bg-[#0A0F1D] max-w-3xl w-full rounded-3xl p-6 relative border border-emeraldglow/40 shadow-2xl my-auto overflow-hidden">
             <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-emeraldglow via-cyanglow to-purpleglow"></div>
-            <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/5 hover:bg-white/15 flex items-center justify-center text-mute transition-all cursor-pointer"><i class="fa-solid fa-xmark text-xs"></i></button>
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center text-white transition-all cursor-pointer"><i class="fa-solid fa-xmark text-sm"></i></button>
             <span id="modal-id" class="text-[10px] font-mono text-mute mb-1 block">ID: 000</span>
             <h3 id="modal-title" class="text-lg sm:text-xl font-bold text-cream mb-1">Title</h3>
             <p id="modal-issuer" class="text-[11px] font-mono text-emeraldglow mb-4">Issuer</p>
-            <div class="h-56 sm:h-72 cert-matte rounded-2xl border border-emeraldglow/30 flex items-center justify-center relative mb-5 p-2">
-                <img id="modal-cert-img" src="" alt="Certificate" class="w-full h-full object-contain">
+            <div class="w-full h-80 sm:h-96 cert-matte rounded-2xl border border-emeraldglow/30 flex items-center justify-center relative mb-5 p-2 bg-[#060913]">
+                <img id="modal-cert-img" src="" alt="Certificate" class="max-w-full max-h-full object-contain">
             </div>
             <div class="flex justify-end gap-2">
                 <a id="modal-verify-btn" href="#" target="_blank" class="btn-gold !py-2.5 !px-5 !text-[11px]">Open / Verify</a>
@@ -747,7 +784,7 @@
             { title: "AI for Business Summer Training", issuer: "ITIDA & NTI", year: "2026", id: "itida-nti-ai-for-business", link: "#", img: "assets/ITIDA & NTI.jpg" }
         ];
 
-        /* حركة تفاعلية ثلاثية الأبعاد لكروت الشهادات */
+        /* عرض الشهادة كاملة بوضوح داخل كارت حي يتفاعل 3D */
         function renderCertificates(filterQuery = '') {
             const grid = document.getElementById('cert-grid');
             const noRes = document.getElementById('no-results');
@@ -769,7 +806,7 @@
 
             filtered.forEach((cert, i) => {
                 const card = document.createElement('div');
-                card.className = "cert-card lux-card spot pop overflow-hidden flex flex-col justify-between group p-4";
+                card.className = "cert-card lux-card spot pop overflow-hidden flex flex-col justify-between group p-5";
                 card.style.animationDelay = (i * 0.05) + 's';
                 card.innerHTML = `
                     <div>
@@ -779,14 +816,14 @@
                             </span>
                             <span class="text-[10px] font-mono text-mute">${cert.year}</span>
                         </div>
-                        <div class="h-32 cert-matte rounded-xl mb-3 relative overflow-hidden flex items-center justify-center border border-emeraldglow/30 p-1.5">
-                            <img src="${cert.img}" alt="${cert.title}" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=300'">
+                        <div class="cert-img-wrap cursor-pointer" onclick="openModal('${encodeURIComponent(cert.title)}', '${encodeURIComponent(cert.issuer)}', '${cert.year}', '${cert.id}', '${cert.link}', '${cert.img}')">
+                            <img src="${cert.img}" alt="${cert.title}" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400'">
                         </div>
                         <h3 class="text-xs sm:text-sm font-bold text-cream mb-1 group-hover:text-emeraldglow transition-colors line-clamp-2 min-h-[2.4em]">${cert.title}</h3>
-                        <p class="text-[10px] font-mono text-mute mb-3 truncate">Issued by: ${cert.issuer}</p>
+                        <p class="text-[10px] font-mono text-mute mb-4 truncate">Issued by: ${cert.issuer}</p>
                     </div>
-                    <button onclick="openModal('${encodeURIComponent(cert.title)}', '${encodeURIComponent(cert.issuer)}', '${cert.year}', '${cert.id}', '${cert.link}', '${cert.img}')" class="w-full py-2 px-2 rounded-full bg-emeraldglow/10 hover:bg-emeraldglow hover:text-night text-emeraldglow font-bold text-[10px] sm:text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 border border-emeraldglow/35 cursor-pointer">
-                        <i class="fa-solid fa-eye text-[10px]"></i> View
+                    <button onclick="openModal('${encodeURIComponent(cert.title)}', '${encodeURIComponent(cert.issuer)}', '${cert.year}', '${cert.id}', '${cert.link}', '${cert.img}')" class="w-full py-2.5 px-2 rounded-full bg-emeraldglow/10 hover:bg-emeraldglow hover:text-night text-emeraldglow font-bold text-[10px] sm:text-xs tracking-wider uppercase transition-all flex items-center justify-center gap-1.5 border border-emeraldglow/35 cursor-pointer">
+                        <i class="fa-solid fa-expand text-[10px]"></i> View Full
                     </button>
                 `;
                 grid.appendChild(card);
@@ -897,8 +934,11 @@
             setTimeout(() => items.forEach(el => el.classList.add('in')), 3500);
         }
 
-        /* 3D Tilt Effect حركة الماوس التفاعلية لجميع الكروت بدون استثناء */
+        /* 3D Tilt Effect حركة الماوس التفاعلية لجميع الكروت */
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+
         document.addEventListener('mousemove', (e) => {
+            if (isMobile) return;
             const card = e.target.closest && e.target.closest('.lux-card');
             if (!card || card.classList.contains('no-lift')) return;
             const r = card.getBoundingClientRect();
@@ -917,6 +957,7 @@
         });
 
         document.addEventListener('mouseout', (e) => {
+            if (isMobile) return;
             const card = e.target.closest && e.target.closest('.lux-card');
             if (!card || card.classList.contains('no-lift')) return;
             card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)`;
@@ -946,9 +987,13 @@
             }
         }
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        for (let i = 0; i < 38; i++) particles.push(new Particle());
+        for (let i = 0; i < (isMobile ? 18 : 38); i++) particles.push(new Particle());
         function animate() {
             ctx.clearRect(0, 0, width, height);
+            if (isMobile) {
+                particles.forEach(p => p.draw());
+                return;
+            }
             particles.forEach(p => { if (!reduceMotion) p.update(); p.draw(); });
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
